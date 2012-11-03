@@ -4,7 +4,7 @@
 
 1. Homebrew でのインストール
 
-omake: make より少し賢いビルドツール．Objective Caml 向けのセポートがあるので，少し便利なので使っている．OMakefile を参考にして，Makefile を書き直してくれれば標準的な make でも大丈夫なはず．
+    omake: make より少し賢いビルドツール．Objective Caml 向けのセポートがあるので，少し便利なので使っている．OMakefile を参考にして，Makefile を書き直してくれれば標準的な make でも大丈夫なはず．
 
 1. GODI でのインストール
 
