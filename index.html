@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Opengl.ml : OpenGL SuperBible を参考に OCaml (LablGL) の手習いをするプロジェクト" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Opengl.ml</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/wakita/OpenGL.ML">View on GitHub</a>
+
+          <h1 id="project_title">Opengl.ml</h1>
+          <h2 id="project_tagline">OpenGL SuperBible を参考に OCaml (LablGL) の手習いをするプロジェクト</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/wakita/OpenGL.ML/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/wakita/OpenGL.ML/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <p><a href="www.starstonesoftware.com/OpenGL/">OpenGL SuperBible</a> の例題をOCaml (LablGL) で実装しなおす試み．</p>
+
+<h2>環境の設定</h2>
+
+<ol>
+<li>Homebrew でのインストール</li>
+</ol><p>omake: make より少し賢いビルドツール．Objective Caml 向けのセポートがあるので，少し便利なので使っている．OMakefile を参考にして，Makefile を書き直してくれれば標準的な make でも大丈夫なはず．</p>
+
+<ol>
+<li>
+<p>GODI でのインストール</p>
+
+<p>Homebrew ある程度はサポートしているが，OCaml 関連のソフトウェアについては，GODI の方が充実している．このため OCaml とその関連ソフトウェアはすべて GODI でインストールした．</p>
+
+<p>とはいえ，このプロジェクトで利用する LablGL は OCaml の標準的なモジュールなので，OCaml だけをインストールすればよい．ちなみに，使用しているバージョンは以下の通り．</p>
+
+<p>OCaml 4.01, LablGL 1.04, LablGL 1.01, LablGL.togl 1.01</p>
+
+<p>また，GODI に標準の findlib は omake の規則の記述に用いている．</p>
+</li>
+</ol><h2>LablGL のドキュメントについて</h2>
+
+<p>LablGL についての情報はネット上にはほとんど皆無といってよい．頼りになるのは，OCaml に付属のヘッダファイルである．このヘッダファイルは $(GODI)/lib/ocaml/std-pkg/lablGL/*.mli に見つかる．</p>
+
+<p>このファイル群をテキストエディタで眺めてもよいのだが，多くのファイルを同時に開くのは面倒だろう．私は ocamlbrowser を使っている．これは OCaml 用のドキュメントブラウザである．基本的には *.mli ファイルをブラウズするためのツールなのだが，相互参照や簡単な検索機能を提供しているため便利である．LablGL のドキュメントを眺めるときの ocamlbrowser の起動方法は以下の通り．</p>
+
+<pre><code>ocamlfind ocamlbrowser -I +lablGL
+</code></pre>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Opengl.ml maintained by <a href="https://github.com/wakita">wakita</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
