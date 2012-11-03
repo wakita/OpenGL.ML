@@ -1,0 +1,12 @@
+open build/OCaml
+
+USE_OCAMLFIND = true
+
+OCAMLPACKS = lablGL lablGL.glut
+OCAMLFLAGS = -w a-10
+
+DefineCommandVars()
+
+.PHONY: all clean veryclean
+
+.SUBDIRS: .

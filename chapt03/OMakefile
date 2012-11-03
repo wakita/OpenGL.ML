@@ -1,0 +1,16 @@
+ALL = points pointsz lines lstipple triangle
+ALLOPT = $(addsuffix .opt, $(ALL))
+
+OCamlProgram(points,   m points)
+OCamlProgram(pointsz,  m pointsz)
+OCamlProgram(lines,    m lines)
+OCamlProgram(lstipple, m lstipple)
+OCamlProgram(triangle, m triangle)
+
+.DEFAULT: $(ALLOPT)
+
+clean:
+    rm -f $(filter-out $(ALLOPT), $(filter-proper-targets $(ls .R, .)))
+
+veryclean: clean
+    rm -f $(ALLOPT)

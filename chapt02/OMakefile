@@ -1,0 +1,14 @@
+ALL = simple glrect bounce
+ALLOPT = $(addsuffix .opt, $(ALL))
+
+OCamlProgram(simple, simple)
+OCamlProgram(glrect, glrect)
+OCamlProgram(bounce, bounce)
+
+.DEFAULT: $(ALLOPT)
+
+clean:
+    rm -f $(filter-out $(ALLOPT), $(filter-proper-targets $(ls .R, .)))
+
+veryclean: clean
+    rm -f $(ALLOPT)
